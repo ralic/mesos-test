@@ -1,5 +1,7 @@
 #!/bin/bash
 
+bash /vagrant/repo.sh
+
 apt -y install mesos lxc-docker conntrack ethtool
 
 service zookeeper stop

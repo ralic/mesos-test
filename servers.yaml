@@ -4,14 +4,17 @@
   ram: 1024 
   ip: 192.168.50.100
   cpu: 1
+  prov: install_master.sh
 - name: slave1
   box: ubuntu/trusty64
   ram: 2048
   ip: 192.168.50.11
   cpu: 2
+  prov: install_slave.sh
 - name: slave2
   box: ubuntu/trusty64
   ram: 2048
   ip: 192.168.50.12
   cpu: 2
+  prov: install_slave.sh
 

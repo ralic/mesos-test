@@ -13,6 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   servers.each do |servers|
     config.vm.define servers["name"] do |s|
       s.vm.box = servers["box"]
+      s.vm.provision :shell, path:  servers["prov"]
       s.vm.hostname = servers["name"]
       s.vm.network :private_network, ip: servers["ip"]
       s.vm.provider :virtualbox do |vb|

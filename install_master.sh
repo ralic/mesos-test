@@ -1,5 +1,7 @@
 #!/bin/sh
 
+bash /vagrant/repo.sh
+
 apt -y install mesos marathon chronos lxc-docker conntrack ethtool python-pip
 
 echo "1" > /etc/zookeeper/conf/myid
@@ -23,5 +25,10 @@ echo "192.168.50.100" >/etc/mesos-master/hostname
 service mesos-master restart
 service marathon restart
 service chronos restart
+
+cd /root
+git clone https://github.com/mesosphere/marathon.git
+cd marathon/bin
+./haproxy-marathon-bridge install_haproxy_system localhost:8080
 
 
