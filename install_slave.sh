@@ -20,3 +20,6 @@ echo "${myip}" >/etc/mesos-slave/hostname
 echo 'docker,mesos' > /etc/mesos-slave/containerizers
 echo '5mins' > /etc/mesos-slave/executor_registration_timeout
 echo "cpus(*):2; mem(*):1536; disk(*):20000; ports(*):[31000-32000]" > /etc/mesos-slave/resources
+
+service mesos-slave restart
+
