@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt-key adv --keyserver keyserver.ubuntu.com --recv E56151BF
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E56151BF
 DISTRO=$(lsb_release -is | tr '[:upper:]' '[:lower:]')
 CODENAME=$(lsb_release -cs)
 
